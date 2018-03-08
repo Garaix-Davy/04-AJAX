@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>AJAX</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script language="JavaScript" type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+
+	<h1>Code Topic 04 - AJAX</h1>
+	<h4>Requesting a JSON file</h4>
+	<hr></hr>
+  <h2>Search the USDA food database and select a food for a list of nutrients.</h2>
+  <p>Note: Only 1000 API calls per hour can be made. If more than 1000 calls are made in an hour, this will cease to work for 1 hour.</p>
+  Food: <input type="text" id="food" name="food"/>
+  <button type="button" onclick="lookupFood()">Search</button>
+  <div id="foodResults"></div>
+  <br>
+  <div id="nutrientsResults"></div>
+
+
+
+</body>
+
+</html>
