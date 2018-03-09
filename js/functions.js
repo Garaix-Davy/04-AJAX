@@ -1,4 +1,5 @@
 var resultList = document.getElementById('foodResults');
+var nutRes = document.getElementById('nutrientsResults');
 var debug = document.getElementById('debug');
 
 function lookupFood() {
@@ -14,6 +15,7 @@ function searchFood(searchedFood){
 
 
   var xhr = new XMLHttpRequest();
+  nutRes.innerHTML = "";
   xhr.open('GET', 'https://api.nal.usda.gov/ndb/search/?format=json&q='+searchedFood+'&ds=Standard%20Reference&sort=n&offset=0&api_key=SFogF1z0mW1NPIzFfGS8HnxJmQEzVYVgGXx3LJrS');
   xhr.send(null);
   xhr.onreadystatechange = function() {
@@ -56,14 +58,10 @@ function getNutrients(ndbno) {
                           + "</li>";
         }
         nutrientsList += "</ul>";
-
-        //var foods = JSON.parse(lyrics);
-        var nutRes = document.getElementById('nutrientsResults');
         nutRes.innerHTML = "<h2>Nutrients in " + food.name + " (100g portion)</h2>"
                          + nutrientsList
                          + "<h2>Stringified JSON received from USDA database</h2>" + JSON.stringify(data, null, 4);
       } else {
-        var nutRes = document.getElementById('nutrientsResults');
         nutRes.innerHTML = "Error: " + xhr.status;
       }
     }
