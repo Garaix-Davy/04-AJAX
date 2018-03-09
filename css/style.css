@@ -1,10 +1,12 @@
 button {
     background-color: white;
     color: black;
+    font-family: arial;
+    font-size: 12px;
     border: 2px solid orange;
     border-radius: 20px;
-    padding: 5px;
-    margin: 5px;
+    padding: 4px;
+    margin: 4px;
     text-decoration: none;
     display: inline-block;
 }
@@ -14,14 +16,23 @@ button:hover, button:active {
     color: white;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 li {
-  display: inline-block;
   color: black;
+  font-family: arial;
+  font-size: 12px;
   text-align: center;
   border: 2px solid blue;
   border-radius: 20px;
-  padding: 5px;
-  margin: 5px;
+  padding: 4px;
+  margin: 4px;
+  list-style-type: none;
+  text-decoration: none;
+  display: inline-block;
 }
 
 li:hover {
