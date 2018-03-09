@@ -9,7 +9,7 @@ function lookupFood() {
 
 function searchFood(searchedFood){
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://api.nal.usda.gov/ndb/search/?format=json&q='+searchedFood+'&ds=Standard%20Reference&sort=n&max=25&offset=0&api_key=SFogF1z0mW1NPIzFfGS8HnxJmQEzVYVgGXx3LJrS');
+  xhr.open('GET', 'https://api.nal.usda.gov/ndb/search/?format=json&q='+searchedFood+'&ds=Standard%20Reference&sort=n&offset=0&api_key=SFogF1z0mW1NPIzFfGS8HnxJmQEzVYVgGXx3LJrS');
   xhr.send(null);
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
